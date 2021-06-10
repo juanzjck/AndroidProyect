@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ejemplo1seminarios">
-
+    package="com.example.ejemplo1seminarios"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--android:icon="@mipmap/ic_launcher"-->
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:name="com.orm.SugarApp"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejemplo1Seminarios">
+
+        <meta-data android:name="DATABASE" android:value="contacts.db" />
+        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example.ejemplo1seminarios" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,12 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pantalla">
-
-        </activity>
-        <activity android:name=".SiguientePantalla">
-
-        </activity>
+        <activity android:name=".Pantalla"></activity>
+        <activity android:name=".SiguientePantalla"></activity>
+        <activity android:name=".ContactnfoActivity"></activity>
+        <activity android:name=".NewContact"></activity>
     </application>
 
 </manifest>
