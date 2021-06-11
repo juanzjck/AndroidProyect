@@ -2,6 +2,7 @@ package com.example.ejemplo1seminarios;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,8 @@ public class NewContact extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
     public void cancel(View v){
         Intent intent= new Intent(getApplicationContext(),MainActivity.class);
         try {

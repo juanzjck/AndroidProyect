@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import android.view.View;
@@ -48,10 +49,13 @@ public class MainActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 int image =(int)((ImageView)view.findViewById(R.id.imagenViewRC)).getTag();
                 String name =  ((TextView)view.findViewById(R.id.textViewRCName)).getText().toString();
                 String phone= ((TextView)view.findViewById(R.id.textViewRCPhone)).getText().toString();
                 String address= ((TextView)view.findViewById(R.id.textViewRCAddress)).getText().toString();
+
+
 
                 Intent intent = new Intent(getApplicationContext(),ContactnfoActivity.class);
                 intent.putExtra("EXTRA_IMG",image);

@@ -5,11 +5,18 @@ import com.orm.SugarRecord;
 import java.io.Serializable;
 
 public class Contact extends SugarRecord implements Serializable {
+    private  long id;
     private int image;
     private String name;
     private String phone;
     private String address;
-
+    public Contact(long id,int image, String name, String phone, String address){
+        this.id=id;
+        this.image=image;
+        this.name=name;
+        this.phone=phone;
+        this.address=address;
+    }
     public Contact(int image, String name, String phone, String address){
         this.image=image;
         this.name=name;
@@ -19,6 +26,7 @@ public class Contact extends SugarRecord implements Serializable {
     public Contact(){
 
     }
+
 
     public int getImage(){
         return this.image;
